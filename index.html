@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MASJID</title>
+	<link rel="stylesheet" href="assest/css/style.css">
+	<link rel="stylesheet" href="assest/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assest/fonts/kalpurush.ttf">
+</head>
+<body onload="initClock()">
+
+
+     <div class="box">
+     	<div class="container">
+     		<div class="bis">
+     			<div class="row">
+     				<div class="col-sm-6">
+              <h1 class="text-start">مُحَمَّد </h1>
+     				</div>
+     				<div class="col-sm-6">
+     					<h1 class="text-end">اللّٰهُ</h1>
+     				</div>
+     			</div>
+     			<h1>বিসমিল্লাহির রাহমানির রাহীম</h1>
+     		     <div class="datetime">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+     		    <h4>নামাজের সময়সূচি</h4>
+     		</div>
+     		<div class="row">
+     			<div class="col-sm-6">
+     				<div class="namaj">
+	     				<h2>ফজর</h2> <img src="assest/img/right1.png" alt="" class="arrow">
+	     				<h2>যোহর </h2> <img src="assest/img/right1.png" alt="" class="arrow tw">
+	     				<h2>আসর </h2> <img src="assest/img/right1.png" alt="" class="arrow th">
+	     				<h2>মাগরিব </h2> <img src="assest/img/right1.png" alt="" class="arrow fr">
+	     				<h2>এশা </h2> <img src="assest/img/right1.png" alt="" class="arrow fv">
+	     				<h2>জুম্মা </h2> <img src="assest/img/right1.png" alt="" class="arrow sx">
+	     				<img src="assest/img/minar2.png" alt="" class="img-fluid">
+     				</div>
+     			</div>
+     			<div class="col-sm-6">
+     				<div class="somoy">
+	     				<h2>4:40</h2>
+	     				<h2>1:30</h2>
+	     				<h2>5:15</h2>
+	     				<h2>6:55</h2>
+	     				<h2>8:45</h2>
+	     				<h2>1:30</h2>
+	     				<img src="assest/img/minar2.png" alt="" class="img-fluid">
+     				</div>
+     			</div>
+     		</div>
+     		<div class="mbl">
+     			<h1>মোবাইল ফোন বন্ধ রাখুন</h1> 
+     		</div>
+     	</div>
+     		
+     	</div>
+
+     	<script type="text/javascript">
+    function updateClock(){
+      var now = new Date();
+      var dname = now.getDay(),
+          mo = now.getMonth(),
+          dnum = now.getDate(),
+          yr = now.getFullYear(),
+          hou = now.getHours(),
+          min = now.getMinutes(),
+          sec = now.getSeconds(),
+          pe = "AM";
+		  
+          if(hou >= 12){
+            pe = "PM";
+          }
+          if(hou == 0){
+            hou = 12;
+          }
+          if(hou > 12){
+            hou = hou - 12;
+          }
+
+          Number.prototype.pad = function(digits){
+            for(var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+          }
+
+          var months = ["জানুয়ারি", "ফেব্রুয়ারি", "মার্চ", "এপ্রিল", "মে", "জুন", "জুলাই", "আগস্ট", "সেপ্টেম্বর", "অক্টোবর", "নভেম্বর", "ডিসেম্বর"];
+          var week = ["রবিবার", "সোমবার", "মঙ্গলবার", "বুধবার", "বৃহস্পতিবার", "শুক্রবার", "শনিবার"];
+          var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+          var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+          for(var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    }
+
+    function initClock(){
+      updateClock();
+      window.setInterval("updateClock()", 1);
+    }
+    </script>
+
+
+
+     	
+	
+</body>
+</html>

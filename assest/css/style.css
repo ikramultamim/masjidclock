@@ -1,0 +1,122 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Kalpurush', Arial, sans-serif !important;
+
+}
+.box {
+    height: 100vh;
+    width: 730px;
+    background: #000;
+    border: 1px solid #000;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.bis p {
+    text-align: left !important;
+    color: #4efa05;
+    display: inline-block;
+    font-size: 65px;
+}
+.bis p span {
+    text-align: right !important;
+    color: #4efa05 ;
+}
+.bis h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #4efa05;
+}
+.bis h4 {
+    font-size: 35px;
+    color: #4efa05;
+    font-weight: 400;
+}
+.namaj img {
+    position: absolute;
+    top: 170px;
+    left: 4px;
+   
+}
+.namaj h2 {
+    font-size: 55px;
+    font-weight: 700;
+    color: #4efa05;
+}
+.somoy h2 {
+	font-size: 55px;
+    font-weight: 700;
+	color: red;
+}
+.somoy img {
+    position: absolute;
+    top: 170px;
+    right: 0;
+    
+}
+.mbl h1 {
+    font-size: 40px;
+    color: red;
+    font-weight: 600;
+}
+.datetime{
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+.date {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 3px;
+    color: red;
+}
+
+.time {
+    font-size: 60px;
+    color: #4efa05;
+}
+
+.time span:not(:last-child){
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child{
+  background: #2e4f69;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 10px;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+.namaj .arrow {
+    position: absolute;
+    top: 340px;
+    left: 310px;
+    height: 44px;
+    width: 112px;
+}
+.tw {
+    top: 415px !important;
+}
+.th{
+    top: 485px !important;
+}
+.fr{
+   top: 560px !important;
+}
+.fv{
+   top: 635px !important;
+}
+.sx{
+   top: 705px !important;
+}
